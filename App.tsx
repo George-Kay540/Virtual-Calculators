@@ -10,6 +10,7 @@ import AboutPage from './components/pages/AboutPage';
 import TermsPage from './components/pages/TermsPage';
 import PrivacyPage from './components/pages/PrivacyPage';
 import { Menu } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 const SEO_DATA: Record<CalculatorType, { title: string; description: string; keywords: string }> = {
   [CalculatorType.BASIC]: {
@@ -152,6 +153,7 @@ const App: React.FC = () => {
         <div className="fixed top-0 right-0 -z-10 w-[600px] h-[600px] bg-ocean-100/40 rounded-full blur-[120px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
         <div className="fixed bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-ocean-200/20 rounded-full blur-[100px] pointer-events-none -translate-x-1/4 translate-y-1/4" />
       </main>
+      <Analytics />
     </div>
   );
 };
