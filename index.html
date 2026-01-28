@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online-Calculator - Multi-Purpose Calculator Site</title>
+    <meta name="description" content="A professional-grade suite of calculators including Basic, Scientific, Fraction, and Percentage tools. Modern, fast, and responsive." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Online-Calculator-1" />
+    <meta property="og:description" content="All-in-one mathematical toolkit for students and professionals." />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              background: '#FFFFFF',
+              surface: '#ADE8F4',
+              ocean: {
+                900: '#03045E',
+                800: '#023E8A',
+                700: '#0077B6',
+                600: '#0096C7',
+                500: '#00B4D8',
+                400: '#48CAE4',
+                300: '#90E0EF',
+                200: '#ADE8F4',
+                100: '#CAF0F8',
+              },
+              primary: '#0077B6',
+              secondary: '#48CAE4',
+            },
+            animation: {
+              blink: 'blink 1.2s step-end infinite',
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              blink: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0077B6; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #023E8A; 
+      }
+      body {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-ocean-900 antialiased overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
