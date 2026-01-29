@@ -1,4 +1,4 @@
-# 🧮 Online Calculator
+# Online Calculator
 
 A professional-grade, multi-purpose calculator web application built with React and TypeScript. Featuring multiple calculator types with a modern, responsive UI.
 
